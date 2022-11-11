@@ -12,5 +12,6 @@
   "author": "zmm2113@qq.com",
   "license": "ISC",
   "dependencies": {
+    "@icon-park/vue": "^1.4.2"
   }
 }

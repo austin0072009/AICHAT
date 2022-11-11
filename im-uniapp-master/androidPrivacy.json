@@ -9,7 +9,7 @@
   "hrefLoader"：“system|default”  
   "second": {  
     "title": "确认提示",  
-    "message": "　　进入应用前，你需先同意<a href=\"http://tcjy33.cn/public/1.html">《服务协议》</a>和<a href=\"http://tcjy33.cn/public/1.html">《隐私政策》</a>，否则将退出应用。",  
+    "message": "　　进入应用前，你需先同意<a href="/">《服务协议》</a>和<a href="">《隐私政策》</a>，否则将退出应用。",  
     "buttonAccept": "同意并继续",  
     "buttonRefuse": "退出应用"  
   },  

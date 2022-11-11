@@ -7,14 +7,14 @@
 				<view class="person-wx-user-detail" @click="goPersonDetail">
 					<view class="person-wx-nikename">{{userInfo.nickName}}</view>
 					<view class="person-wx-name">
-						<text class="text">微聊号：{{userInfo.chatNo}}</text>
+						<text class="text">AI听聊号：{{userInfo.chatNo}}</text>
 						<image class="person-wx-fcode" src="../../static/wx/t05.png" mode="aspectFill"></image>
 						<uni-icons class="person-wx-right" type="right" size="26" color="#676767"></uni-icons>
 					</view>
 				</view>
 			</view>
 		</view>
-		<tool-list-wx :list="fuwu"></tool-list-wx>
+		<!-- <tool-list-wx :list="fuwu"></tool-list-wx> -->
 		<tool-list-wx :list="shoucang"></tool-list-wx>
 		<tool-list-wx :list="shezhi"></tool-list-wx>
 	</view>
@@ -41,15 +41,17 @@
 					icon: '../../static/wx/t01.png',
 					else: []
 				},{
-					title: '卡包(未开通)',
-					path: '',
-					icon: '../../static/wx/t10.png',
+					title: '积分',
+					path: '../../wx/pointSystem/index',
+					icon: '../../static/wx/t06.png',
+				
+					//icon: '../../static/wx/t10.png',
 					else: []
 				},{
-					title: '表情(未开通)',
-					path: '',
-					icon: '../../static/wx/t09.png',
-					else: []
+					// title: '表情(未开通)',
+					// path: '',
+					// icon: '../../static/wx/t09.png',
+					// else: []
 				}],
 				shezhi: [{
 					title: '设置',

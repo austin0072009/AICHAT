@@ -125,9 +125,9 @@
             "splashscreen" : {
                 "androidStyle" : "default",
                 "android" : {
-                    "hdpi" : "unpackage/res/splash/splash480.9.png",
-                    "xhdpi" : "unpackage/res/splash/splash750.9.png",
-                    "xxhdpi" : "unpackage/res/splash/splash1080.9.png"
+                    "hdpi" : "C:/Users/austinbaba/Downloads/Telegram Desktop/480762.png",
+                    "xhdpi" : "C:/Users/austinbaba/Downloads/Telegram Desktop/7201242.png",
+                    "xxhdpi" : "C:/Users/austinbaba/Downloads/Telegram Desktop/10801882.png"
                 },
                 "useOriginalMsgbox" : true
             }

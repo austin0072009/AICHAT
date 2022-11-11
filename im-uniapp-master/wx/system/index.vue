@@ -38,16 +38,16 @@
 					hideRight:true,
 					else:[{
 						type: 'text',
-						content: '微聊 v'+versionName
+						content: 'AI听聊 v'+versionName
 					}]
 				},{
-					title: '开源',
-					path: '#',
-					hideRight:true,
-					else:[{
-						type: 'text',
-						content: '考拉开源，学习请加Q群535099683'
-					}]
+					// title: '开源',
+					// path: '#',
+					// hideRight:true,
+					// else:[{
+					// 	type: 'text',
+					// 	content: '考拉开源，学习请加Q群535099683'
+					// }]
 				}],
 				list3:[{
 					title: '修改密码',

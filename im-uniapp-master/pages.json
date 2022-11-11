@@ -594,7 +594,21 @@
 					"style": {
 						"navigationBarTitleText": "资料设置" //好友资料设置
 					}
-				}, {
+				},
+				{
+						"path":"pointSystem/index",
+						"name":"wxpointSystem",
+						"requireAuth": true,
+						"style": {
+							"navigationBarTitleText": "积分"
+						}
+						
+						
+					
+					
+				}
+				
+				,{
 					"path": "friendsCircle/index",
 					"name": "wxfriendsCircle",
 					"aliasPath": "/wxfriendsCircle",
@@ -735,7 +749,16 @@
 						}
 					}
 				}
-			]
+			    ,{
+                    "path" : "index/index",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 		},
 		{
 
