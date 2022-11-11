@@ -41,7 +41,7 @@
 					icon: '../../static/wx/t01.png',
 					else: []
 				},{
-					title: '积分',
+					title: '积分 (签到送积分)',
 					path: '../../wx/pointSystem/index',
 					icon: '../../static/wx/t06.png',
 				

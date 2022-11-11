@@ -16,16 +16,16 @@
 		data() {
 			return {
 				list3:[{
-					title: '视频号(未开通)',
-					path:'',
-					icon: '../../static/wx/t03.png',
-					else: [{
-						type: 'dotimg',
-						content: '../../static/img/avatar/avatar2.jpg'
-					}, {
-						type: 'text',
-						content: '两个朋友赞过'
-					}]
+					// title: '视频号(未开通)',
+					// path:'',
+					// icon: '../../static/wx/t03.png',
+					// else: [{
+					// 	type: 'dotimg',
+					// 	content: '../../static/img/avatar/avatar2.jpg'
+					// }, {
+					// 	type: 'text',
+					// 	content: '两个朋友赞过'
+					// }]
 				},{
 					title: '直播(未开通)',
 					path:'',
@@ -54,34 +54,40 @@
 					icon: '../../static/wx/t15.png',
 					else: []
 				}],
-				list4:[{
-					title: '看一看(未开通)',
-					path:'',
-					icon: '../../static/wx/t13.png',
-					else: []
-				},{
-					title: '搜一搜(未开通)',
-					path:'',
-					icon: '../../static/wx/t14.png',
-					else: []
-				}],
-				list6:[{
-					title: '购物(未开通)',
-					path:'',
-					icon: '../../static/wx/t16.png',
-					else: []
-				},{
+				list4:[
+				// 	{
+				// 	title: '看一看(未开通)',
+				// 	path:'',
+				// 	icon: '../../static/wx/t13.png',
+				// 	else: []
+				// },{
+				// 	title: '搜一搜(未开通)',
+				// 	path:'',
+				// 	icon: '../../static/wx/t14.png',
+				// 	else: []
+				// },
+				],
+				list6:[
+				// 	{
+				// 	title: '购物(未开通)',
+				// 	path:'',
+				// 	icon: '../../static/wx/t16.png',
+				// 	else: []
+				// },
+				{
 					title: '游戏(未开通)',
 					path:'',
 					icon: '../../static/wx/t17.png',
 					else: []
 				}],
-				list7:[{
-					title: '小程序(未开通)',
-					path:'',
-					icon: '../../static/wx/t18.png',
-					else: []
-				}]
+				list7:[
+				// 	{
+				// 	title: '小程序(未开通)',
+				// 	path:'',
+				// 	icon: '../../static/wx/t18.png',
+				// 	else: []
+				// },
+				]
 			}
 		},
 		onShow(){

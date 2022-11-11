@@ -220,9 +220,10 @@ export default {
 			});
 		},
 		gofriend(e) {
-			uni.navigateTo({
-				url: '../../wx/personInfo/detail?param=' + e.userId+'&source=7'
-			});
+			// uni.navigateTo({
+			// 	url: '../../wx/personInfo/detail?param=' + e.userId+'&source=7'
+			// });
+			//群众禁止查看好友
 		},
 		switchChange(e, type) {
 			var yn = e.detail.value ? 'Y' : 'N';
