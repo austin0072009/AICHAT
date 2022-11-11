@@ -27,6 +27,10 @@
 					<view class="zfb-tk-send-tools-icon"><view class="wxfont" :class="v.icon"></view></view>
 					<view class="zfb-tk-send-tools-text">{{ v.title }}</view>
 				</view>
+				<view class="zfb-tk-send-tools-item" >
+					<view  class="zfb-tk-send-tools-icon"><image class="wxfont zengsong" src="../../static/货币兑换_exchange.png" style="width: 35.33px; height: 35px;"></image></view>
+					<view  class="zfb-tk-send-tools-text">赠送积分</view>
+				</view>
 			</view>
 			<scroll-view :scroll-y="true" v-if="showEmojitool" class="wxemojitool">
 				<view class="wxemojitool-content">
@@ -87,7 +91,9 @@ export default {
 				{
 					title: '收藏',
 					icon: 'shoucang'
-				}
+				},
+				
+	
 			],
 			msgFocus: false,
 			showtool: false,
