@@ -28,7 +28,7 @@
 					<view class="zfb-tk-send-tools-text">{{ v.title }}</view>
 				</view>
 				<view class="zfb-tk-send-tools-item" >
-					<view  class="zfb-tk-send-tools-icon"><image class="wxfont zengsong" src="../../static/货币兑换_exchange.png" style="width: 35.33px; height: 35px;"></image></view>
+					<view  class="zfb-tk-send-tools-icon"><image class="wxfont zengsong" src="../../static/exchange.png" style="width: 35.33px; height: 35px;"></image></view>
 					<view  class="zfb-tk-send-tools-text">赠送积分</view>
 				</view>
 			</view>

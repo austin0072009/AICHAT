@@ -1,6 +1,6 @@
 <template>
 	<view class="container-point">
-		<image src="../../static/理财_financing.png" mode="aspectFit" style="width: 100px; height: 100px "></image>
+		<image src="../../static/financing.png" mode="aspectFit" style="width: 100px; height: 100px "></image>
 		
 		<view class="pointText" style="font-size: 30px !important; ">我的积分</view>
 		<view class="pointText">{{point}}</view>
