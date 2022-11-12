@@ -23,8 +23,20 @@ export default {
             canRemove: false,
             extraLine: []
         }
+		
+		
     },
+	onLoad() {
+		console.log("fetching data");
+		this.$store.dispatch('get_UserInfo').then(res=>{
+			console.log(res);
+			this.point = res.gold;
+			
+		})
+	}
+	,
     methods: {
+	
         
     }
 }

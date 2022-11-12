@@ -12,7 +12,7 @@ import { createStore } from 'vuex'
   const store = createStore({
 // #endif
 	state: {
-		watermark:'仅供学习参考请勿用于商业！',
+		watermark:'',
 		userInfo:'',
 		chatlist:[],
 		chatDatalist:[],
