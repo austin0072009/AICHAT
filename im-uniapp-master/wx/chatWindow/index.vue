@@ -28,7 +28,7 @@
 					<view class="zfb-tk-send-tools-icon"><view class="wxfont" :class="v.icon"></view></view>
 					<view class="zfb-tk-send-tools-text">{{ v.title }}</view>
 				</view>
-				<view class="zfb-tk-send-tools-item" v-if="singlechat == '1'"   @click="sendPoint()">
+				<view class="zfb-tk-send-tools-item" v-if="singlechat == '1'"   @click="sendPoint(this.myid,this.talkTo.userId)">
 					<view  class="zfb-tk-send-tools-icon"><image class="wxfont zengsong" src="../../static/exchange.png" style="width: 35.33px; height: 35px;"></image></view>
 					<view  class="zfb-tk-send-tools-text">赠送积分</view>
 					
@@ -56,6 +56,7 @@ import favorites from '../favorites/index.vue';
 import chatItem from './chat-item.vue';
 import sendCard from './sendCard.vue';
 import http from '@/common/request';
+import fc from '@/common/publicFc.js';
 
 export default {
 	components: {
@@ -336,29 +337,58 @@ export default {
 			});
 		},
 		
-		sendPoint(){
+		sendPoint(myId,targetId){
+			myId = this.myid;
+			targetId = this.talkTo.userId;
+			var giftpoint = 0;
 			uni.showModal({
 				title:"赠送积分",
 				// content:"请输入需要转账的积分数额",
 				editable:"1",
 				placeholderText:"请输入需要转账的积分数额",
+				
 				success(res) {
 					console.log(res.content);
-					console.log(userinfo());
+					console.log(myId,targetId);
+					giftpoint = res.content;
 				http.request({
 					url: '/my/transferGold',
 					method: 'POST',
 					data:JSON.stringify(
 					{
+						userid:myId,
 						gold:res.content,
-						userid:this.myid,
-						targetid:this.talkTo.userId
+						
+						targetid:targetId
 						
 						}
 					),
+					// data:
+					// {
+					// 	userid:myId,
+					// 	gold:parseInt(res.content),
+						
+					// 	targetid:targetId
+						
+					// 	}
+					// ,
 					success: (res) => {
 						if (res.data.code == 200) {
 							console.log('success');
+							fc.pushOutMsg({
+								msgContent: `赠送积分成功：${giftpoint}`,
+								msgType: "ALERT",
+								windowType: "SINGLE",
+								userId: targetId
+							});
+						}
+						else {
+							fc.pushOutMsg({
+								msgContent: `赠送积分失败`,
+								msgType: "ALERT",
+								windowType: "SINGLE",
+								userId: targetId
+							});
 						}
 					}
 				});

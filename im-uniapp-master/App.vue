@@ -166,7 +166,7 @@
 							msgType:msgType,
 							windowType:'SINGLE',
 							userId:call.userId,
-						})
+						});
 						uni.removeStorageSync('call')
 					}
 				}
