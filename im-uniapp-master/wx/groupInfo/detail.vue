@@ -16,6 +16,12 @@
 		<tool-list-wx :list="list3" @itemClick="itemClick3"></tool-list-wx>
 		<view class="wxgroupInfo">
 			<view class="xw-tool-list">
+				<view v-if="this.detail.master == 'Y'" class="xw-tool-list-content">
+					<view class="xw-tool-item">
+						<text class="xw-tool-text">全体禁言</text>
+						<switch color="#05C160" :checked="Banedsilience" @change="switchChange($event, 'qtjy')" style="transform:scale(0.75);" />
+					</view>
+				</view>
 				<view class="xw-tool-list-content">
 					<view class="xw-tool-item">
 						<text class="xw-tool-text">消息免打扰</text>
@@ -58,7 +64,8 @@ export default {
 				set: {
 					top: 'N',
 					keepGroup: 'N',
-					disturb: 'N'
+					disturb: 'N',
+					taboo: 'N'
 				},
 				group: {
 					notice: ''
@@ -104,10 +111,14 @@ export default {
 		},
 		Baneddisturb() {
 			return this.detail.set.disturb == 'Y' ? true : false;
+		},
+		Banedsilience() {
+			return this.detail.set.taboo == 'Y' ? true : false;
 		}
 	},
 	onLoad(e) {
 		this.param = e.param;
+		console.log("parem is " + this.param);
 	},
 	onShow() {
 		this.getInfo(this.param);
@@ -269,6 +280,17 @@ export default {
 					};
 					ynText = e.detail.value ? '已保存' : '已移除';
 					break;
+				case 'qtjy':
+					url = 'group/editGroupTaboo';
+					formData = {
+						groupId : this.param,
+						taboo: yn
+					};
+					ynText = e.detail.value ? '已经禁言' : '取消禁言';
+					break;
+					
+					
+					
 				default:
 					break;
 			}
