@@ -17,7 +17,7 @@
 export default {
     data() {
         return {
-			point:'1000',
+			point:'NULL',
             text: '积分相关活动请联系客服！',
             canAdd: true,
             canRemove: false,

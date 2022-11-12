@@ -1,6 +1,7 @@
 <template>
 	<view>
 		<watermark></watermark>
+		
 		<uni-popup ref="popup" type="center">
 			<view class="popsendCard" :style="'height:' + windowHeight + 'px'"><sendCard @click="sendCardclick"></sendCard></view>
 		</uni-popup>
@@ -27,9 +28,10 @@
 					<view class="zfb-tk-send-tools-icon"><view class="wxfont" :class="v.icon"></view></view>
 					<view class="zfb-tk-send-tools-text">{{ v.title }}</view>
 				</view>
-				<view class="zfb-tk-send-tools-item" >
+				<view class="zfb-tk-send-tools-item" v-if="singlechat == '1'"   @click="sendPoint()">
 					<view  class="zfb-tk-send-tools-icon"><image class="wxfont zengsong" src="../../static/exchange.png" style="width: 35.33px; height: 35px;"></image></view>
 					<view  class="zfb-tk-send-tools-text">赠送积分</view>
+					
 				</view>
 			</view>
 			<scroll-view :scroll-y="true" v-if="showEmojitool" class="wxemojitool">
@@ -53,6 +55,8 @@ let observer = null;
 import favorites from '../favorites/index.vue';
 import chatItem from './chat-item.vue';
 import sendCard from './sendCard.vue';
+import http from '@/common/request';
+
 export default {
 	components: {
 		chatItem,
@@ -61,6 +65,8 @@ export default {
 	},
 	data() {
 		return {
+			myid: '',
+			singlechat : 'null',
 			isBottomHeight: '',
 			clickToSubmitSure: null,
 			autodown: true,
@@ -111,6 +117,7 @@ export default {
 	},
 	computed: {
 		userinfo() {
+			
 			return this.$store.state.userInfo;
 		},
 		chatListInfo() {
@@ -151,6 +158,11 @@ export default {
 		}
 	},
 	onLoad(e) {
+		this.$store.dispatch('get_UserInfo').then(res=>{
+			console.log(res);
+			this.myid = res.userId;
+			
+		});
 		this.talkTo = e;
 		// 根据Id
 		this.$store
@@ -172,6 +184,9 @@ export default {
 						title: '音视频',
 						icon: 'yspin'
 					});
+					
+					this.singlechat = '1';
+					
 				} else {
 					this.$fc.setTitleNViewBtns(0, '');
 					this.showtitleNViewBtns = false;
@@ -201,6 +216,7 @@ export default {
 			100,
 			false
 		);
+		
 	},
 	onPageScroll() {
 		this.clickToSubmitSure();
@@ -319,6 +335,37 @@ export default {
 				this.sendMsg(e.content, e.msgType);
 			});
 		},
+		
+		sendPoint(){
+			uni.showModal({
+				title:"赠送积分",
+				// content:"请输入需要转账的积分数额",
+				editable:"1",
+				placeholderText:"请输入需要转账的积分数额",
+				success(res) {
+					console.log(res.content);
+					console.log(userinfo());
+				http.request({
+					url: '/my/transferGold',
+					method: 'POST',
+					data:JSON.stringify(
+					{
+						gold:res.content,
+						userid:this.myid,
+						targetid:this.talkTo.userId
+						
+						}
+					),
+					success: (res) => {
+						if (res.data.code == 200) {
+							console.log('success');
+						}
+					}
+				});
+				}
+			})
+		}
+		,
 		sendVoiceCall() {
 			//发起语音
 			uni.showLoading({

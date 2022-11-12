@@ -251,7 +251,13 @@ export default {
 			});
 		},
 		returnParse(txt) {
-			return JSON.parse(txt);
+			// return JSON.parse(txt);
+			console.log(txt)
+			      try {
+			          return JSON.parse(txt)
+			        } catch (e) {
+			          return null
+			        }
 		},
 		tryagin(e, i) {
 			this.$emit('tryagin', e, i);
