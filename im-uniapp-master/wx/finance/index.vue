@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<web-view :webview-styles="webviewStyles" src="https://finance.cctv.com/"></web-view>
+		<web-view :webview-styles="webviewStyles" src="https://wap.eastmoney.com/"></web-view>
 	</view>
 </template>
 

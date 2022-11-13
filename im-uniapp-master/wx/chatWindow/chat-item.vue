@@ -9,6 +9,7 @@
 				<view class="zfb-tk-item-contentx-c">
 					<view class="zfb-tk-time-notsend wxfont fssb" @click="tryagin(item, itemKey)" v-if="item.sendtype && item.sendtype == 'error'"></view>
 					<view class="zfb-tk-item-contentx-c-tool">
+						<view v-if = "item.windowType == 'GROUP'"> {{item.nickName}}</view>
 						<view class="zfb-tk-item-c" v-if="item.msgType == 'TEXT'">
 							<text>{{ item.content }}</text>
 						</view>
@@ -62,6 +63,7 @@
 							<view class="zfb-tk-item-c-CARD-card">推荐名片</view>
 						</view>
 						<view v-if="showTrs" class="zfb-tk-item-c-VOICE-tras-text">{{returnParse(item.content).text}}</view>
+						
 						<view class="zfb-tk-time" v-if="item.time">{{ timeDetia(item.time) }}</view>
 					</view>
 				</view>
@@ -105,6 +107,8 @@ export default {
 			if(this.itemKey==v){
 				this.$refs['toolx'+v].showTab();
 			}
+			
+			
 		}
 	},
 	data() {
@@ -113,6 +117,9 @@ export default {
 			paused:false,
 			showTrs:false,
 		};
+	},
+	onLoad(){
+		
 	},
 	methods: {
 		sendVoiceCall(){
@@ -252,7 +259,7 @@ export default {
 		},
 		returnParse(txt) {
 			// return JSON.parse(txt);
-			console.log(txt)
+			console.log("test:" + txt);
 			      try {
 			          return JSON.parse(txt)
 			        } catch (e) {
@@ -337,7 +344,7 @@ export default {
 <style lang="scss" scoped>
 $avatarsize: 80rpx;
 $border-radius: 12rpx;
-$textcolor: #fff;
+$textcolor: #000000;
 $descolor: #999;
 $leftbgcolor: #00aaff;
 $rightbgcolor: #4cd964;
@@ -635,7 +642,13 @@ $rightbgcolor: #4cd964;
 .zfb-tk-TRTC .wxfont{
 	font-size: 42rpx;
 }
-.zfb-tk-item-contentx-c-tool{display: flex;flex-direction: column;}
+.zfb-tk-item-contentx-c-tool{
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center !important;
+	    align-content: center;
+	    justify-content: center;
+	}
 .zfb-tk-msgleft .zfb-tk-item-contentx-c-tool{
 	align-items: flex-start;
 }

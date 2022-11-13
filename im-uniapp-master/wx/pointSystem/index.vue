@@ -51,7 +51,7 @@ export default {
     justify-content: space-evenly;
     align-content: center;
     flex-wrap: nowrap;
-    height: 40vh;
+    height: 70vh;
 	}
 	
 	.pointText{
@@ -61,7 +61,7 @@ export default {
 	
 	.custom-btn {
 	  width: 130px;
-	  height: 40px;
+	  height: 80px;
 	  color: #fff;
 	  border-radius: 5px;
 	  padding: 10px 25px;
@@ -80,13 +80,16 @@ export default {
 	
 /* 5 */
 .btn-5 {
-  width: 130px;
-  height: 40px;
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  background: rgb(255,27,0);
-background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+    width: 130px;
+    height: 60px;
+    line-height: 42px;
+    padding: 0;
+    display: flex;
+    border: none;
+    background: rgb(255,27,0);
+    background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+    justify-content: center;
+    align-items: center;
 }
 .btn-5:hover {
   color: #f0094a;

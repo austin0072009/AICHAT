@@ -226,7 +226,7 @@
 					// "aliasPath": "/wxshake",
 					"requireAuth": true,
 					"style": {
-						"navigationBarTitleText": "财经网",
+						"navigationBarTitleText": "东方财富",
 						"navigationBarBackgroundColor":"#212121",
 						"navigationBarTextStyle":"white"
 					}
