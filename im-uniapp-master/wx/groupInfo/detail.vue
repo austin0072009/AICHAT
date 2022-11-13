@@ -6,14 +6,14 @@
 				<image class="wxgroup-list-img" :src="v.portrait" mode="aspectFill"></image>
 				<text class="wxgroup-list-text">{{ v.nickName }}</text>
 			</view>
-			<view class="wxgroup-list-item" @click="qunAdd">
+			<view v-if="this.detail.master == 'Y'" class="wxgroup-list-item" @click="qunAdd">
 				<view class="wxgroup-list-icon"><view class="wxfont jia"></view></view>
 			</view>
-			<view class="wxgroup-list-item" @click="qunless">
+			<view v-if="this.detail.master == 'Y'" class="wxgroup-list-item" @click="qunless">
 				<view class="wxgroup-list-icon"><view class="wxfont jian"></view></view>
 			</view>
 		</view>
-		<tool-list-wx :list="list3" @itemClick="itemClick3"></tool-list-wx>
+		<tool-list-wx v-if="this.detail.master == 'Y'" :list="list3" @itemClick="itemClick3" ></tool-list-wx>
 		<view class="wxgroupInfo">
 			<view class="xw-tool-list">
 				<view v-if="this.detail.master == 'Y'" class="xw-tool-list-content">

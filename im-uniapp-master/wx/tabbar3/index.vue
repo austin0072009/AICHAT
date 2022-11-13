@@ -38,22 +38,31 @@
 						content: '直播中'
 					}]
 				}],
-				list2:[{
+				list2:[
+					{
 					title: '扫一扫',
 					path:'#',
 					icon: '../../static/wx/t02.png',
 					else: []
-				},{
-					title: '摇一摇',
-					path:'../../wx/shake/index',
-					icon: '../../static/wx/t12.png',
-					else: []
-				},{
-					title: '附近',
-					path:'../../wx/nearby/index',
-					icon: '../../static/wx/t15.png',
-					else: []
-				}],
+				},
+				// {
+				// 	title: '财经网',
+				// 	path:'../../wx/webview/index',
+				// 	icon: '../../static/palace.png',
+					
+				// }
+				// {
+				// 	title: '摇一摇',
+				// 	path:'../../wx/shake/index',
+				// 	icon: '../../static/wx/t12.png',
+				// 	else: []
+				// },{
+				// 	title: '附近',
+				// 	path:'../../wx/nearby/index',
+				// 	icon: '../../static/wx/t15.png',
+				// 	else: []
+				// },
+				],
 				list4:[
 				// 	{
 				// 	title: '看一看(未开通)',
