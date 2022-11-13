@@ -23,10 +23,10 @@
 						<image class="zfb-tk-item-c-img" v-if="item.msgType == 'IMAGE'" :src="returnParse(item.content).url" mode="aspectFill" @click="$fc.previewImagesolo(returnParse(item.content).url)"></image>
 						<view v-if="item.msgType == 'VOICE'" class="zfb-tk-item-c-VOICE">
 							<view class="zfb-tk-item-c-VOICE-msg">
-								<view class="zfb-tk-item-c-VOICE-tras" @click="showTrs=!showTrs">
+							<!-- 	<view class="zfb-tk-item-c-VOICE-tras" @click="showTrs=!showTrs">
 									<text>转文字</text>
-									<!-- <view class="zfb-tk-item-c-VOICE-tras-icon"></view> -->
-								</view>
+									
+								</view> -->
 								<view class="zfb-tk-item-c" @click="playVOICE(returnParse(item.content).url)">
 									<text>{{returnParse(item.content).time}}</text>
 									<text class="wxfont yuyin" :class="{vmove:paused}"></text>
@@ -263,10 +263,11 @@ export default {
 			this.$emit('tryagin', e, i);
 		},
 		gochatOne(e) {
-			var source=e.windowType=="GROUP" ? '7' : '3'
-			uni.navigateTo({
-				url:'../personInfo/detail?param='+e.personId+'&source='+source
-			})
+			// var source=e.windowType=="GROUP" ? '7' : '3'
+			// uni.navigateTo({
+			// 	url:'../personInfo/detail?param='+e.personId+'&source='+source
+			// })
+			//禁止群内互相点击头像添加好友
 		},
 		longpressItem(e,i,v) {//长按回调
 			console.log(e)

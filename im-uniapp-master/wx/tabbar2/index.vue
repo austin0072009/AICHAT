@@ -16,7 +16,7 @@
 		onLoad() {},
 		onShow() {
 			this.getflist()
-			this.$store.dispatch('tabBarpull')
+			//this.$store.dispatch('tabBarpull')
 		},
 		methods: {
 			bindClick(e){

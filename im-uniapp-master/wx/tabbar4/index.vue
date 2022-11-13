@@ -66,7 +66,12 @@
 				return this.$store.state.userInfo
 			}
 		},
-		onLoad() {},
+		onLoad() {
+			
+			console.log(this.$store.state.chatDatalist);
+			
+			
+		},
 		onShow(){
 			this.$store.dispatch('tabBarpull')
 		},

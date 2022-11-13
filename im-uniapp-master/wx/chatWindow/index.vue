@@ -9,7 +9,8 @@
 			<scroll-view scroll-y :style="'height:' + windowHeight + 'px'"><favorites type="2" @clickitem="clickitem"></favorites></scroll-view>
 		</uni-popup>
 		<view class="zfb-tk-main">
-			<uni-list class="zfb-tk-conent" :border="false" style="background: none;"><chatItem v-for="(v, index) in chatWindowData" :key="'key' + index" :talkTo="talkTo" :itemKey="index" :item="v" @tryagin="tryagin" @longpressItem="longpressItem" :longTapItemKey="longTapItemKey"></chatItem></uni-list>
+			<uni-list class="zfb-tk-conent" :border="false" style="background: none;">
+				<chatItem v-for="(v, index) in chatWindowData" :key="'key' + index" :talkTo="talkTo" :itemKey="index" :item="v" @tryagin="tryagin" @longpressItem="longpressItem" :longTapItemKey="longTapItemKey"></chatItem></uni-list>
 			<view class="autodownView"></view>
 		</view>
 		<view :style="'height: ' + keyboardHeight + 'px'"></view>

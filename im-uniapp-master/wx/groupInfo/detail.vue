@@ -113,7 +113,7 @@ export default {
 			return this.detail.set.disturb == 'Y' ? true : false;
 		},
 		Banedsilience() {
-			return this.detail.set.taboo == 'Y' ? true : false;
+			return this.detail.taboo == 'Y' ? true : false;
 		}
 	},
 	onLoad(e) {

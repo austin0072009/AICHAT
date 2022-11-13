@@ -146,9 +146,9 @@ export default {
 			}
 		},
 		gofriend(e){
-			uni.navigateTo({
-				url:'../../wx/personInfo/detail?param='+e.userId
-			})
+			// uni.navigateTo({
+			// 	url:'../../wx/personInfo/detail?param='+e.userId
+			// })
 		},
 		pimgs(arr,ii){
 			var imgs=[]

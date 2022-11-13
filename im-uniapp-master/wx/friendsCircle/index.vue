@@ -90,6 +90,7 @@ export default {
 			uni.navigateTo({
 				url: '../../wx/friendsCircle/person'
 			});
+		
 		},
 		gomsglist() {
 			uni.navigateTo({
