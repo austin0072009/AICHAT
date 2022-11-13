@@ -45,12 +45,12 @@
 					icon: '../../static/wx/t02.png',
 					else: []
 				},
-				// {
-				// 	title: '财经网',
-				// 	path:'../../wx/webview/index',
-				// 	icon: '../../static/palace.png',
+				{
+					title: '财经网',
+					path:'../../wx/finance/index',
+					icon: '../../static/palace.png',
 					
-				// }
+				},
 				// {
 				// 	title: '摇一摇',
 				// 	path:'../../wx/shake/index',

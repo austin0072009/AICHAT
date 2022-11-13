@@ -219,7 +219,23 @@
 						"navigationBarBackgroundColor":"#212121",
 						"navigationBarTextStyle":"white"
 					}
-				}, {
+				}, 
+				{
+					"path": "finance/index",
+					"name": "wxfinance",
+					// "aliasPath": "/wxshake",
+					"requireAuth": true,
+					"style": {
+						"navigationBarTitleText": "财经网",
+						"navigationBarBackgroundColor":"#212121",
+						"navigationBarTextStyle":"white"
+					}
+				}, 
+				
+				
+				
+				
+				{
 					"path": "nearby/index",
 					"name": "wxnearby",
 					"aliasPath": "/wxnearby",
